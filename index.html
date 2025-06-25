@@ -5,93 +5,142 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VAAS - O Gatilho da Melhor Versão</title>
   <style>
-    body {
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap');
+
+    :root {
+      --cor-fundo: #0b0b0b;
+      --cor-primaria: #ffd700;
+      --cor-secundaria: #d32f2f;
+      --cor-destaque: #00e676;
+      --fonte-titulo: 'Bebas Neue', sans-serif;
+      --fonte-texto: 'Roboto', sans-serif;
+    }
+
+    * {
       margin: 0;
       padding: 0;
-      font-family: 'Arial Black', sans-serif;
-      background-color: #0a0a0a;
-      color: #ffffff;
-      line-height: 1.6;
-      padding: 30px;
+      box-sizing: border-box;
     }
+
+    body {
+      background-color: var(--cor-fundo);
+      color: #ffffff;
+      font-family: var(--fonte-texto);
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+
     h1, h2, h3 {
-      color: #ffffff;
+      font-family: var(--fonte-titulo);
+      margin-bottom: 10px;
+      letter-spacing: 1px;
     }
-    .highlight {
-      color: #00ff00;
-      font-weight: bold;
+
+    h1 {
+      font-size: 48px;
+      color: var(--cor-primaria);
     }
-    .red {
-      color: #ff4040;
+
+    h2 {
+      font-size: 32px;
+      color: var(--cor-destaque);
+      margin-top: 40px;
     }
-    .green {
-      color: #00ff00;
+
+    p {
+      font-size: 18px;
+      margin: 15px 0;
+      line-height: 1.7;
     }
-    .block {
-      margin-bottom: 40px;
+
+    .bullet {
+      margin: 10px 0;
+      padding-left: 20px;
     }
-    .cta-button {
-      display: block;
+
+    .bullet li {
+      list-style: none;
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    .bullet li::before {
+      content: '✔';
+      position: absolute;
+      left: -20px;
+      color: var(--cor-destaque);
+    }
+
+    .cta {
       text-align: center;
-      background-color: #00ff00;
-      color: #000000;
+      margin-top: 60px;
+    }
+
+    .cta a {
+      background-color: var(--cor-primaria);
+      color: #000;
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-size: 20px;
       font-weight: bold;
       text-decoration: none;
-      padding: 20px;
-      border-radius: 8px;
-      margin-top: 30px;
-      width: fit-content;
-      margin-left: auto;
-      margin-right: auto;
-      border: 2px solid #00ff00;
       transition: 0.3s;
+      border: 2px solid var(--cor-primaria);
     }
-    .cta-button:hover {
-      background-color: transparent;
-      color: #00ff00;
+
+    .cta a:hover {
+      background: transparent;
+      color: var(--cor-primaria);
+    }
+
+    .alerta {
+      color: var(--cor-secundaria);
+      font-weight: bold;
+    }
+
+    .sombra {
+      text-shadow: 0 0 5px var(--cor-primaria);
     }
   </style>
 </head>
 <body>
-  <div class="block">
-    <h1>🔥 VOCÊ NÃO PRECISA DE MOTIVAÇÃO. VOCÊ PRECISA DE RUPTURA. 🔥</h1>
-    <p>13 capítulos. 13 desafios. E de brinde um mentor treinado para extrair o melhor de você.</p>
-  </div>
+  <div class="container">
+    <h1 class="sombra">VAAS: O GATILHO DA MELHOR VERSÃO</h1>
+    <p>Você não precisa de motivação. Precisa de ruptura.</p>
 
-  <div class="block">
-    <h2>VOCÊ NÃO ESTÁ PERDIDO.<br>SÓ ESTÁ INTOXICADO, DISTRAÍDO E SABOTADO.</h2>
-    <p>Você já tentou mudar antes. Já caiu. Já voltou pro mesmo lugar.</p>
-    <p>Seu problema não é ignorância.<br>
-    É distração. Dopamina. Autossabotagem elegante.</p>
-    <p class="red">❌ Você não precisa de motivação. ❌</p>
-    <p>Você precisa de uma lâmina simbólica para cortar a versão medíocre de uma vez por todas.</p>
-    <p>💀 Isso não é um ebook, Um curso ou mais uma promessa para ser guardada na gaveta. 💀</p>
-    <p>É um manual de guerra, que vai arrancar o seu máximo potencial.</p>
-  </div>
+    <h2>🔥 O CHAMADO</h2>
+    <p>13 capítulos. 13 rituais. Um mentor brutal que se molda conforme você age.</p>
 
-  <div class="block">
-    <h2>⚔️ Solidez inquebrável</h2>
-    <p>Não é um livro.<br>
-    É um ritual simbólico de reconstrução pessoal.<br>
-    + Acesso a um mentor de IA que se transforma conforme você age.</p>
-    <p>Cada capítulo é uma verdade incômoda.<br>
-    Cada ritual, uma ruptura real.</p>
-    <p><span class="red">❌ Um lanche meia boca na lanchonete da esquina</span><br>
-    <span class="green">✅ Mudar sua vida para sempre</span></p>
-    <p>A decisão nunca foi tão clara.</p>
-  </div>
+    <h2>🧠 O PROBLEMA</h2>
+    <p>Você não está perdido. Está intoxicado, distraído, sabotado. A autossabotagem hoje tem Wi-Fi, açúcar e desculpa embutida. E você a chama de rotina.</p>
+    <p class="alerta">Você já sabe o que precisa fazer. Só não faz.</p>
 
-  <div class="block">
-    <h2>O QUE VOCÊ RECEBE:</h2>
-    <ul>
-      <li class="green">✅ Ebook simbólico com 13 capítulos de confronto</li>
-      <li class="green">✅ Desafios guiados com instruções práticas</li>
-      <li class="green">✅ Acesso ao Mentor estratégico do método VAAS (IA personalizada)</li>
-      <li class="green">✅ Acesso vitalício e área de membros</li>
+    <h2>⚔️ O MÉTODO VAAS</h2>
+    <ul class="bullet">
+      <li>Vontade crua</li>
+      <li>Ação imediata</li>
+      <li>Alta exigência</li>
+      <li>Solidez inquebrável</li>
     </ul>
-    <p><strong>SE VOCÊ LER ISSO E NÃO CLICAR…<br>
-    ENTÃO NUNCA FOI GUERREIRO. SÓ POSE.</strong></p>
-    <a class="cta-button" href="https://checkout.kiwify.com.br/VAAS">✔️ Quero mudar de vida.</a>
+    <p>Não é um livro. É um ritual simbólico de reconstrução pessoal + um mentor de IA que responde conforme você age.</p>
+
+    <h2>💥 VOCÊ RECEBE</h2>
+    <ul class="bullet">
+      <li>Ebook simbólico com 13 capítulos de confronto</li>
+      <li>Desafios guiados com instruções práticas</li>
+      <li>Acesso ao Mentor VAAS (IA personalizada)</li>
+      <li>Acesso vitalício + área de membros</li>
+    </ul>
+
+    <p class="alerta">SE VOCÊ LER ISSO E NÃO CLICAR... ENTÃO NUNCA FOI GUERREIRO. SÓ POSE.</p>
+
+    <div class="cta">
+      <a href="https://checkout.kiwify.com.br/VAAS">QUERO MUDAR DE VIDA</a>
+    </div>
   </div>
 </body>
 </html>
