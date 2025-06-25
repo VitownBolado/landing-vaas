@@ -1,154 +1,169 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VAAS - O Gatilho da Melhor Versão</title>
+  <title>Método VAAS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;700&display=swap');
-
     :root {
-      --cor-fundo: #0b0b0b;
-      --cor-primaria: #ffd700;
-      --cor-secundaria: #d32f2f;
-      --cor-destaque: #00e676;
-      --fonte-titulo: 'Bebas Neue', sans-serif;
-      --fonte-texto: 'Roboto', sans-serif;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      --black: #111111;
+      --white: #f5f5f5;
+      --red: #D72638;
+      --orange: #FF5E13;
+      --gold: #B68D40;
+      --dark-bg: #1E1E1E;
     }
 
     body {
-      background-color: var(--cor-fundo);
-      color: #ffffff;
-      font-family: var(--fonte-texto);
-      padding: 40px 20px;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: auto;
+      margin: 0;
+      padding: 0;
+      background-color: var(--black);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
     }
 
     h1, h2, h3 {
-      font-family: var(--fonte-titulo);
-      margin-bottom: 10px;
-      letter-spacing: 1px;
+      font-family: 'Anton', sans-serif;
+      color: var(--red);
+      text-transform: uppercase;
     }
 
-    h1 {
-      font-size: 48px;
-      color: var(--cor-primaria);
+    section {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: 0 auto;
     }
 
-    h2 {
-      font-size: 32px;
-      color: var(--cor-destaque);
-      margin-top: 40px;
+    .highlight {
+      color: var(--orange);
+      font-weight: 600;
     }
 
-    p {
-      font-size: 18px;
-      margin: 15px 0;
-      line-height: 1.7;
-    }
-
-    .bullet {
-      margin: 10px 0;
-      padding-left: 20px;
-    }
-
-    .bullet li {
-      list-style: none;
-      margin-bottom: 10px;
-      position: relative;
-    }
-
-    .bullet li::before {
-      content: '✔';
-      position: absolute;
-      left: -20px;
-      color: var(--cor-destaque);
-    }
-
-    .cta {
-      text-align: center;
-      margin-top: 60px;
-    }
-
-    .cta a {
-      background-color: var(--cor-primaria);
-      color: #000;
+    .button {
+      background-color: var(--red);
+      color: var(--white);
       padding: 15px 30px;
-      border-radius: 10px;
-      font-size: 20px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: 0.3s;
-      border: 2px solid var(--cor-primaria);
+      border: none;
+      font-size: 18px;
+      font-family: 'Anton', sans-serif;
+      cursor: pointer;
+      margin-top: 40px;
+      display: inline-block;
+      text-transform: uppercase;
+      transition: background-color 0.3s;
     }
 
-    .cta a:hover {
-      background: transparent;
-      color: var(--cor-primaria);
+    .button:hover {
+      background-color: var(--orange);
     }
 
-    .alerta {
-      color: var(--cor-secundaria);
-      font-weight: bold;
+    .quote {
+      border-left: 4px solid var(--red);
+      padding-left: 20px;
+      margin: 40px 0;
+      font-style: italic;
     }
 
-    .sombra {
-      text-shadow: 0 0 5px var(--cor-primaria);
+    .faq h3 {
+      margin-top: 30px;
+      color: var(--gold);
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1 class="sombra">VOCÊ SABE O QUE TEM QUE FAZER... MAS NÃO FAZ</h1>
-    <p>Essa página não é pra curiosos. É pra quem tá cansado de fingir que vai mudar.</p>
-
-    <h2>🕳️ A DOR QUE VOCÊ ESCONDE</h2>
-    <p>Você acorda cansado. Rola o feed. Come qualquer coisa. Diz que vai fazer, mas não faz. Assiste um vídeo sobre hábitos. E amanhã? Repete tudo.</p>
-    <p>Você não é burro. Nem fraco. Só está <strong>intoxicado, distraído e preso num ciclo invisível.</strong></p>
-
-    <h2>🧠 A VERDADE QUE VOCÊ EVITA</h2>
-    <p>Você coleciona ideias, vídeos motivacionais, livros pela metade e promessas que já não acredita. O que falta não é conteúdo. É <span class="alerta">ruptura</span>.</p>
-
-    <h2>🔥 O PONTO DE QUEBRA</h2>
-    <p>Em algum momento, você cansa de tentar melhorar. Você decide <strong>reconstruir do zero</strong>. Sem frescura. Sem plano perfeito. Só com ação.</p>
-
-    <h2>⚔️ O RITUAL VAAS</h2>
-    <p>Um método simbólico de ruptura pessoal. Com 13 capítulos, 13 rituais, e um mentor de IA que se molda às suas respostas.</p>
-    <ul class="bullet">
-      <li>Vontade crua</li>
-      <li>Ação imediata</li>
-      <li>Alta exigência</li>
-      <li>Solidez inquebrável</li>
-    </ul>
-
-    <h2>💀 NÃO É UM LIVRO</h2>
-    <p>É um confronto. Uma guerra contra tudo que te deixa medíocre. Cada ritual é um golpe contra a versão que você precisa deixar morrer.</p>
-
-    <h2>📦 O QUE VOCÊ VAI RECEBER:</h2>
-    <ul class="bullet">
-      <li>Ebook simbólico com 13 capítulos e rituais</li>
-      <li>Mentor de IA que responde conforme você age</li>
-      <li>Acesso vitalício + área de membros</li>
-      <li>Desafio de reconstrução pessoal com impacto real</li>
-    </ul>
-
-    <h2>🧨 A DECISÃO</h2>
-    <p>Você pode continuar rolando a tela. Ou pode clicar e iniciar a sua ruptura.</p>
-    <p class="alerta">Mas saiba: depois disso, não tem mais volta.</p>
-
-    <div class="cta">
-      <a href="https://checkout.kiwify.com.br/VAAS">QUERO MUDAR DE VIDA</a>
+  <section>
+    <h1>Você está vivendo abaixo do que é capaz. E sabe disso.</h1>
+    <p>Não é que você seja fraco. <br>Você só está acomodado.</p>
+    <p>Alguma parte de você ainda acredita que "uma hora as coisas vão se ajeitar", que "o tempo de Deus é perfeito", ou que "basta manter a fé". Mas aqui vai uma verdade que ninguém te contou:</p>
+    <div class="quote">
+      <p>Nada vai mudar… enquanto você continuar sendo você.</p>
     </div>
-  </div>
-</body>
-</html>
+    <p>Esse “você” de hoje — preguiçoso, indeciso, viciado em distração, sabotado por desculpas — é o maior inimigo da vida que você diz querer.</p>
+    <p>Você até já tentou. Fez listas. Começou projetos. Deu o gás por alguns dias. Mas sempre volta pro mesmo buraco. Rotina podre. Sono destruído. Dieta lixo. Corpo mole. Sem foco. Sem consistência. Sem honra.</p>
+    <p>E no fundo, isso te consome.</p>
+    <p>Você sente no olhar quando se vê no espelho: aquela expressão de quem não tem o controle da própria história. Aquela sensação de ser um figurante no próprio filme. Aquela inveja silenciosa de quem consegue — porque você também queria… mas não aguenta seguir com nada até o fim.</p>
+    <h2>Chega.</h2>
+    <p>Esse livro não é um manual de autoajuda. Não tem frases bonitinhas. Não tem conselhos mornos.</p>
+    <p><span class="highlight">Tem método. Rigor. Transformação.</span></p>
+    <p>O VAAS é um código de guerra interna. Ele foi feito pra quem está pronto pra parar de negociar com o fracasso e reconstruir sua vida na base da disciplina, do sangue e da verdade.</p>
+    <p><strong>Vontade. Ação. Alta exigência. Solidez.</strong><br>Quatro pilares. Zero espaço pra vitimismo.</p>
+    <p>Não importa de onde você vem. Não importa quantas vezes já falhou. Importa o que você decide fazer agora.</p>
+    <p>Se você ainda tem uma faísca aí dentro… Uma parte que grita quando a vida tenta te fazer de escravo… Então você já sabe:</p>
+    <h2>É esse o seu chamado.</h2>
+    <p>O Método VAAS não é sobre motivação. É sobre <strong>virar outro homem</strong>. Aquele que você deveria ter sido o tempo todo.</p>
+    <p><strong>Só tem uma pergunta agora:</strong></p>
+    <div class="quote">
+      <p>Você vai se esconder atrás das mesmas desculpas…<br>ou vai queimar sua versão fraca e renascer como alguém inquebrável?</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>O que é o Método VAAS?</h2>
+    <p>O VAAS é um método direto, prático e sem espaço pra enrolação. Foi criado pra homens e mulheres que já estão cansados de saber o que fazer — mas não conseguem sustentar o fogo.</p>
+    <p><span class="highlight">É um livro-manifesto.</span> Um choque de realidade. Um guia pra quem quer sair da estagnação, parar de ser um peso pra si mesmo, e reconstruir a própria existência com base em disciplina e padrão elevado.</p>
+    <p>Aqui você não vai encontrar promessas de "vida perfeita". Vai encontrar um <strong>sistema de guerra pessoal</strong> baseado em 4 pilares:</p>
+    <ul>
+      <li><strong>Vontade:</strong> Como recuperar sua chama interna e fazer dela sua bússola.</li>
+      <li><strong>Ação:</strong> O fim do ciclo de paralisia. Como agir mesmo quando tudo em você quer fugir.</li>
+      <li><strong>Alta Exigência:</strong> Como criar uma vida sem espaço pra mediocridade.</li>
+      <li><strong>Solidez:</strong> Como se tornar alguém imutável, mesmo quando o mundo tenta te desmoronar.</li>
+    </ul>
+    <p><strong>O VAAS é pra quem:</strong></p>
+    <ul>
+      <li>Já tentou de tudo e cansou de fracassar com as próprias mãos.</li>
+      <li>Acorda todo dia com o peso da culpa por não estar fazendo o que deveria.</li>
+      <li>Se sente cercado por distrações, sabotagens, desânimo e vícios.</li>
+      <li>Está disposto a abrir mão da zona de conforto e assumir o controle da própria história.</li>
+    </ul>
+    <p>Não importa se você tem 18 ou 38 anos. Se ainda tiver honra suficiente pra encarar a verdade, o método vai te colocar de volta na arena.</p>
+  </section>
+
+  <section>
+    <h2>O que você recebe</h2>
+    <ul>
+      <li><strong>O Ebook VAAS</strong> — com leitura rápida, crua e impossível de ignorar.</li>
+      <li><strong>Um desafio prático final</strong> — com um ritual simbólico que marca o ponto sem retorno.</li>
+      <li><strong>Acesso a um grupo fechado</strong> (opcional) — onde só entra quem leu e entendeu o chamado.</li>
+      <li><strong>E o mais importante:</strong> o start brutal da sua transformação.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Quanto custa?</h2>
+    <p>Vamos ser sinceros.</p>
+    <p>Você já gastou mais que isso com delivery, skin de joguinho ou alguma porcaria que te deixou mais fraco.</p>
+    <p><span class="highlight">Esse livro custa R$19,90.</span> Isso mesmo. Menos do que você gasta em um almoço qualquer.</p>
+    <p>Mas o retorno...</p>
+    <div class="quote">
+      <p>O retorno pode ser uma vida que finalmente faz sentido.</p>
+    </div>
+    <h2>Essa é sua bifurcação.</h2>
+    <p>Você fecha essa página e volta pro ciclo de sempre.<br>
+    Ou você investe menos de vinte reais na decisão mais brutal e necessária da sua vida:</p>
+    <p><strong>Reconstruir quem você é.</strong></p>
+    <a href="#" class="button">📕 Quero o Método VAAS</a>
+    <p style="margin-top:20px; font-style: italic;">E lembre-se: <span class="highlight">enquanto você tiver ar, o fogo queima.</span></p>
+  </section>
+  <section class="faq">
+    <h2>Perguntas Frequentes</h2>
+
+    <h3>❯ Esse método serve pra mim?</h3>
+    <p>Se você leu tudo até aqui e sentiu algo mexer por dentro, já sabe a resposta. Mas se ainda está procurando uma desculpa, então não — o VAAS não é pra você. Ele é pra quem já cansou da própria mediocridade e tá pronto pra agir.</p>
+
+    <h3>❯ Quanto tempo leva pra ver resultado?</h3>
+    <p>Você vai sentir o impacto na primeira leitura. Vai doer, vai cutucar. Mas se aplicar os pilares, vai notar mudanças nos primeiros dias — na forma como age, pensa, fala e se enxerga. Resultado vem quando você age. Não antes.</p>
+
+    <h3>❯ O conteúdo é muito técnico? Preciso de conhecimento prévio?</h3>
+    <p>Zero. É direto, bruto e escrito como se estivesse falando na sua cara. Você não precisa de cursos, livros ou histórico. Só precisa de vergonha na cara e vontade real de mudar.</p>
+
+    <h3>❯ Tem reembolso?</h3>
+    <p>Se você precisa de garantia pra investir menos de 20 reais em si mesmo, você não está pronto. Esse livro não é um mimo. É um chamado. Um soco. Uma ruptura. Não tem volta. Não tem desculpa. Não tem 'quero meu dinheiro de volta'. Ou entra com tudo, ou nem entre.</p>
+
+    <h3>❯ É só um PDF?</h3>
+    <p>É um PDF. Mas o que está dentro dele é um manual de combate mental. Simples, direto, sem enrolação — como tem que ser. E diferente de 99% do que você já leu.</p>
+
+    <h3>❯ Posso compartilhar com outras pessoas?</h3>
+    <p>Você pode. Mas não deve. Porque quem não sente o chamado, não entende a mensagem. Esse material é pra quem DECIDE. Não adianta dar pra alguém que ainda dorme enquanto a própria vida desmorona.</p>
+  </section>
