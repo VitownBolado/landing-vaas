@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Método VAAS</title>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
   <style>
     :root {
-      --black: #111111;
+      --black: #0a0a0a;
       --white: #f5f5f5;
-      --red: #D72638;
+      --red: #b31222;
       --orange: #FF5E13;
       --gold: #B68D40;
-      --dark-bg: #1E1E1E;
+      --dark-bg: #050505;
     }
 
     body {
       margin: 0;
       padding: 0;
-      background-color: var(--black);
+      background-color: var(--dark-bg);
       color: var(--white);
       font-family: 'Inter', sans-serif;
       line-height: 1.6;
     }
 
     h1, h2, h3 {
-      font-family: 'Anton', sans-serif;
       color: var(--red);
+      font-family: 'Anton', sans-serif;
       text-transform: uppercase;
+      letter-spacing: 1.5px;
     }
 
+    h1 { font-size: 2.5em; }
+    h2 { font-size: 2em; margin-top: 40px; }
+    h3 { font-size: 1.5em; }
+
     section {
-      padding: 60px 20px;
+      padding: 40px 20px;
       max-width: 800px;
       margin: 0 auto;
     }
@@ -49,14 +54,23 @@
       font-size: 18px;
       font-family: 'Anton', sans-serif;
       cursor: pointer;
-      margin-top: 40px;
+      margin: 40px 0;
       display: inline-block;
       text-transform: uppercase;
-      transition: background-color 0.3s;
+      transition: all 0.3s;
+      letter-spacing: 1px;
+      text-decoration: none;
+      animation: pulse 2.5s infinite;
     }
 
     .button:hover {
       background-color: var(--orange);
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255, 94, 19, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(255, 94, 19, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 94, 19, 0); }
     }
 
     .quote {
@@ -70,13 +84,26 @@
       margin-top: 30px;
       color: var(--gold);
     }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1s ease-out forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 <body>
-  <section>
+  <section class="fade-in">
     <h1>Você está vivendo abaixo do que é capaz. E sabe disso.</h1>
     <p>Não é que você seja fraco. <br>Você só está acomodado.</p>
-    <p>Alguma parte de você ainda acredita que "uma hora as coisas vão se ajeitar", que "o tempo de Deus é perfeito", ou que "basta manter a fé". Mas aqui vai uma verdade que ninguém te contou:</p>
+    <p>Alguma parte de você ainda acredita que \"uma hora as coisas vão se ajeitar\", que \"o tempo de Deus é perfeito\", ou que \"basta manter a fé\". Mas aqui vai uma verdade que ninguém te contou:</p>
     <div class="quote">
       <p>Nada vai mudar… enquanto você continuar sendo você.</p>
     </div>
@@ -98,12 +125,42 @@
       <p>Você vai se esconder atrás das mesmas desculpas…<br>ou vai queimar sua versão fraca e renascer como alguém inquebrável?</p>
     </div>
   </section>
+<section>
+  <h2>Prova Social</h2>
 
-  <section>
+  <div class="testimonial">
+    <img src="images/victor.jpg" alt="Victor">
+    <div class="testimonial-content">
+      <div class="stars">★★★★★</div>
+      <strong>Victor, 19 anos</strong>
+      <p>“O VAAS foi o primeiro conteúdo que realmente me acordou pra realidade. Não tem enrolação. Tem impacto. Tem verdade. E agora tem resultado.”</p>
+    </div>
+  </div>
+
+  <div class="testimonial">
+    <img src="images/jose.jpg" alt="José">
+    <div class="testimonial-content">
+      <div class="stars">★★★★★</div>
+      <strong>José, 23 anos</strong>
+      <p>“Achei que ia ser mais um PDF motivacional. Mas não. É tapa na cara do começo ao fim. Já mudei mais em 7 dias do que nos últimos 2 anos.”</p>
+    </div>
+  </div>
+
+  <div class="testimonial">
+    <img src="images/roberto.jpg" alt="Roberto">
+    <div class="testimonial-content">
+      <div class="stars">★★★★★</div>
+      <strong>Roberto, 35 anos</strong>
+      <p>“Eu já tinha desistido de mim. O VAAS reacendeu algo que eu achei que tinha morrido. Obrigado por isso.”</p>
+    </div>
+  </div>
+</section>
+
+  <section class="fade-in">
     <h2>O que é o Método VAAS?</h2>
     <p>O VAAS é um método direto, prático e sem espaço pra enrolação. Foi criado pra homens e mulheres que já estão cansados de saber o que fazer — mas não conseguem sustentar o fogo.</p>
     <p><span class="highlight">É um livro-manifesto.</span> Um choque de realidade. Um guia pra quem quer sair da estagnação, parar de ser um peso pra si mesmo, e reconstruir a própria existência com base em disciplina e padrão elevado.</p>
-    <p>Aqui você não vai encontrar promessas de "vida perfeita". Vai encontrar um <strong>sistema de guerra pessoal</strong> baseado em 4 pilares:</p>
+    <p>Aqui você não vai encontrar promessas de \"vida perfeita\". Vai encontrar um <strong>sistema de guerra pessoal</strong> baseado em 4 pilares:</p>
     <ul>
       <li><strong>Vontade:</strong> Como recuperar sua chama interna e fazer dela sua bússola.</li>
       <li><strong>Ação:</strong> O fim do ciclo de paralisia. Como agir mesmo quando tudo em você quer fugir.</li>
@@ -118,35 +175,21 @@
       <li>Está disposto a abrir mão da zona de conforto e assumir o controle da própria história.</li>
     </ul>
     <p>Não importa se você tem 18 ou 38 anos. Se ainda tiver honra suficiente pra encarar a verdade, o método vai te colocar de volta na arena.</p>
+    <a href="https://pay.kiwify.com.br/IruekI3" target="_blank" class="button">🔥 Quero mudar minha vida</a>
   </section>
 
-  <section>
+  <section class="fade-in">
     <h2>O que você recebe</h2>
     <ul>
       <li><strong>O Ebook VAAS</strong> — com leitura rápida, crua e impossível de ignorar.</li>
-      <li><strong>Um desafio prático final</strong> — com um ritual simbólico que marca o ponto sem retorno.</li>
-      <li><strong>Acesso a um grupo fechado</strong> (opcional) — onde só entra quem leu e entendeu o chamado.</li>
+      <li><strong>Uma jornada de transformação completa, simples, e incontestável</strong></li>
+      <li><strong>Contato direto com seu mentor estratégico implacável</strong> — para manter você na linha, sem mimimi.</li>
       <li><strong>E o mais importante:</strong> o start brutal da sua transformação.</li>
     </ul>
+    <a href="https://pay.kiwify.com.br/IruekI3" target="_blank" class="button">⚔️ Quero mudar minha vida</a>
   </section>
 
-  <section>
-    <h2>Quanto custa?</h2>
-    <p>Vamos ser sinceros.</p>
-    <p>Você já gastou mais que isso com delivery, skin de joguinho ou alguma porcaria que te deixou mais fraco.</p>
-    <p><span class="highlight">Esse livro custa R$19,90.</span> Isso mesmo. Menos do que você gasta em um almoço qualquer.</p>
-    <p>Mas o retorno...</p>
-    <div class="quote">
-      <p>O retorno pode ser uma vida que finalmente faz sentido.</p>
-    </div>
-    <h2>Essa é sua bifurcação.</h2>
-    <p>Você fecha essa página e volta pro ciclo de sempre.<br>
-    Ou você investe menos de vinte reais na decisão mais brutal e necessária da sua vida:</p>
-    <p><strong>Reconstruir quem você é.</strong></p>
-    <a href="#" class="button">📕 Quero o Método VAAS</a>
-    <p style="margin-top:20px; font-style: italic;">E lembre-se: <span class="highlight">enquanto você tiver ar, o fogo queima.</span></p>
-  </section>
-  <section class="faq">
+  <section class="faq fade-in">
     <h2>Perguntas Frequentes</h2>
 
     <h3>❯ Esse método serve pra mim?</h3>
@@ -159,11 +202,12 @@
     <p>Zero. É direto, bruto e escrito como se estivesse falando na sua cara. Você não precisa de cursos, livros ou histórico. Só precisa de vergonha na cara e vontade real de mudar.</p>
 
     <h3>❯ Tem reembolso?</h3>
-    <p>Se você precisa de garantia pra investir menos de 20 reais em si mesmo, você não está pronto. Esse livro não é um mimo. É um chamado. Um soco. Uma ruptura. Não tem volta. Não tem desculpa. Não tem 'quero meu dinheiro de volta'. Ou entra com tudo, ou nem entre.</p>
-
-    <h3>❯ É só um PDF?</h3>
-    <p>É um PDF. Mas o que está dentro dele é um manual de combate mental. Simples, direto, sem enrolação — como tem que ser. E diferente de 99% do que você já leu.</p>
+    <p>Sim. Você tem 7 dias de garantia. Se achar que o VAAS não é pra você, basta pedir reembolso e o valor será devolvido sem burocracia. Mas se estiver procurando uma desculpa pra não agir, nem comece.</p>
 
     <h3>❯ Posso compartilhar com outras pessoas?</h3>
     <p>Você pode. Mas não deve. Porque quem não sente o chamado, não entende a mensagem. Esse material é pra quem DECIDE. Não adianta dar pra alguém que ainda dorme enquanto a própria vida desmorona.</p>
+
+    <a href="https://pay.kiwify.com.br/IruekI3" target="_blank" class="button">🔥 Quero mudar minha vida</a>
   </section>
+</body>
+</html>
